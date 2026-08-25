@@ -3,12 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maciej Igor Setniewski — Architect & Interior Design Director, Hong Kong</title>
-  <meta name="description" content="Maciej Igor Setniewski, Hong Kong based architect and interior design director. Architecture, photography, retail design, minimalism." />
-  <meta name="keywords" content="Maciej Setniewski, Maciej Igor Setniewski, architect, interior design, Hong Kong, photography, retail design, lead8, architecture" />
-  <meta property="og:title" content="Maciej Igor Setniewski" />
-  <meta property="og:description" content="Maciej Igor Setniewski — Architect & Interior Design Director, Hong Kong" />
-  <meta http-equiv="refresh" content="24;url=https://confished.com" />
+  <title>Maciej Igor Setniewski — Architect &amp; Interior Design Director</title>
+  <meta name="description" content="Maciej Igor Setniewski is an architect and interior design director specializing in experiential commercial interiors and urban design. Interior Design Director at Lead8." />
+  <meta name="keywords" content="Maciej Setniewski, Maciej Igor Setniewski, architect, interior design director, Lead8, experiential design, commercial interiors, urban design, minimalism, functionalism" />
+  <meta property="og:title" content="Maciej Igor Setniewski — Architect &amp; Interior Design Director" />
+  <meta property="og:description" content="Maciej Igor Setniewski — architect and interior design director specializing in experiential commercial interiors and urban design." />
+  <link rel="canonical" href="https://maciejsetniewski.com" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Maciej Igor Setniewski",
+    "jobTitle": "Interior Design Director",
+    "worksFor": { "@type": "Organization", "name": "Lead8" },
+    "description": "Architect and interior design director specializing in experiential commercial interiors and urban design."
+  }
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QSKC2XY6KZ"></script>
   <script>
@@ -18,27 +28,93 @@
     gtag('config', 'G-QSKC2XY6KZ', { 'transport': 'beacon' });
   </script>
   <style>
+    :root {
+      --bg: #232527;        /* gray background */
+      --text: #9aa0a7;      /* single gray for all text */
+      --line: rgba(146, 176, 196, 0.22);  /* blueprint line */
+      --accent: #8fb3c7;    /* blueprint cyan (decorative only) */
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { min-height: 100vh; }
     body {
-      background: #00273b;
-      color: #ccc;
-      font-family: 'Helvetica Neue', sans-serif;
-      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
+      padding: 48px 24px;
+      position: relative;
+      overflow: hidden;
     }
-    p { font-size: 0.85rem; color: #8899aa; }
+    /* blueprint corridor background */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url("maciej-bg.jpg");
+      background-size: cover;
+      background-position: center;
+      opacity: 1;
+      pointer-events: none;
+    }
+    .sheet {
+      position: relative;
+      width: min(680px, 100%);
+      padding: 48px 40px;
+    }
+    .line {
+      font-size: 0.98rem;
+      line-height: 1.65;
+      color: var(--text);
+      font-weight: 400;
+      margin-bottom: 16px;
+    }
+    h1.line {
+      font-size: 0.98rem;
+      font-weight: 400;
+    }
+    .redirect {
+      margin-top: 32px;
+      font-size: 0.98rem;
+      color: var(--text);
+    }
+    .redirect a { color: var(--text); text-decoration: underline; }
+    .redirect a:hover { color: #c8ccd0; }
+    .cta {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 0.98rem;
+      color: var(--text);
+      text-decoration: underline;
+    }
+    .cta:hover { color: #c8ccd0; }
+    @media (max-width: 520px) {
+      .sheet { padding: 36px 24px; }
+    }
   </style>
 </head>
 <body>
-  <p>You will be redirected to a cautionary tale at <a href="https://confished.com" style="color: #8899aa;">confished.com</a> in <span id="countdown">24</span> seconds</p>
+  <main class="sheet">
+    <h1 class="line" style="margin-left: 0%;">Maciej Igor Setniewski — Interior Design Director, Lead8</h1>
+    <p class="line" style="margin-left: 18%;">Maciej Igor Setniewski is an architect and interior design director specializing in experiential commercial interiors and urban design.</p>
+    <p class="line" style="margin-left: 6%;">Philosophy</p>
+    <p class="line" style="margin-left: 30%;">Setniewski champions experiential interior design — turning retail and commercial spaces from points of purchase into immersive destinations that forge emotional, social, and sensory connections.</p>
+    <p class="line" style="margin-left: 11%;">Influences</p>
+    <p class="line" style="margin-left: 42%;">His work reflects functionalism and minimalism, drawing from Ludwig Mies van der Rohe and Louis Sullivan.</p>
+
+    <div class="redirect" style="margin-left: 4%;">
+      <p>The full story continues at <a href="https://confished.com">confished.com</a> in <span id="countdown">75</span> seconds.</p>
+      <a class="cta" href="https://confished.com">Read the full story &rarr;</a>
+    </div>
+  </main>
+
   <script>
-    let seconds = 24;
+    let seconds = 75;
+    const el = document.getElementById('countdown');
     setInterval(() => {
       seconds--;
-      document.getElementById('countdown').textContent = seconds;
+      el.textContent = seconds;
       if (seconds <= 0) window.location.href = 'https://confished.com';
     }, 1000);
   </script>
