@@ -37,7 +37,12 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body { min-height: 100vh; }
     body {
-      background: var(--bg);
+      background-color: var(--bg);
+      background-image: url("maciej-bg.jpg");
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-blend-mode: multiply;
       color: var(--text);
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       display: flex;
@@ -46,18 +51,6 @@
       padding: 48px 24px;
       position: relative;
       overflow: hidden;
-    }
-    /* blueprint corridor background */
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background-image: url("maciej-bg.jpg");
-      background-size: auto 100%;
-      background-repeat: no-repeat;
-      background-position: center;
-      opacity: 0.5;
-      pointer-events: none;
     }
     .sheet {
       position: relative;
